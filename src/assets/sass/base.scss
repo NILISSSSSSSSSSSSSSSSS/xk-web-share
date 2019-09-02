@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    word-break: break-all;
+    }
+
+ul li {
+    list-style: none;
+    }
+
+@font-face {
+    /* font-properties */
+    font-family: WeChatNum;
+    src: url('~assets/font/WeChatNum.ttf'),
+    url('~assets/font/WeChatNum.ttf'),
+    }
+
+.wechat-num {
+    font-family: WeChatNum;
+    }
+
+input {
+    background: none;
+    outline: none;
+    border: none;
+    }
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    /* .iphonex-bottom {
+         margin-bottom: 34px;
+     }*/
+    /*.goods.iphonex-goods-bottom {
+        padding-bottom: 84px;
+    }
+    .goods-comment .comment-title .comment .comm-null{
+        padding-bottom: 60px !important;
+    }*/
+    .iphonex-bottom {
+        bottom: 34px !important;
+        }
+    .iphonex-pt {
+        padding-bottom: 34px;
+        /*.iphonex-top {
+            &::before {
+                height: 40px;
+                width: 100%;
+                background: transparent;
+                content: "";
+                display: block;
+            }
+        }*/
+        }
+    .vux-popup-dialog {
+        bottom: 34px !important;
+        }
+    }
+
+.ios-scroll {
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    overflow-y: auto;
+    }
+
+.rateWrapper {
+    .vux-rater-box {
+        width: 15px !important;
+        font-size: 19px !important;
+        }
+    }
+
+.marginSet {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    }
+
+.goods .main {
+    padding: 12px;
+    }
+
+// 圆角按钮样式
+.radiusButton {
+    border: 1px solid #4A90FA;
+    border-radius: 12px;
+    text-align: center;
+    /* padding: 3px 2px; */
+    width: 60px;
+    padding: 3px 0;
+    font-size: 12px;
+    color: #4A90FA;
+    }
+
+.g-s-arrow {
+    color: gray;
+    }
+
+.verticleMiddle {
+    vertical-align: middle;
+    }
+
+.arrowDown {
+    fill: gray;
+    }
+
+// 所有弹框下的header
+.dialogBox {
+    .dialogWrapper {
+        background: white;
+        padding-bottom: 20px;
+        }
+    .header {
+        height: 47px;
+        line-height: 47px;
+        text-align: center;
+        position: relative;
+        font-size: 16px;
+        .icon-del {
+            align-self: center;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            font-size: 18px;
+            transform: translateY(-50%);
+            }
+        }
+
+    }
+
+// 所有时间选择器的
+.weui-cells {
+    .vux-datetime {
+        text-decoration: none;
+        p {
+            font-size: 14px !important;
+            text-decoration: none !important;
+            }
+        .vux-cell-value {
+            font-size: 14px !important;
+            }
+        }
+
+    }
+
+// 所有大块蓝色按钮
+.blueButton {
+    background: #4A90FA !important;
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+    }
+
+.blueButton2 {
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    display: block;
+    margin-top: 17px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    background: #4A90FA !important;
+    border-radius: 8px;
+    }
+
+/*加载到底部样式*/
+.toBottm {
+    background: #F6F6F6;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    font-size: 12px;
+    color: #CCCCCC;
+    }
+
+//
+.fontBlue {
+    color: #4A90FA;
+    }
+
+.fontBlack {
+    color: #222222;
+    }
+
+.fontGray {
+    color: #777777;
+    }
+
+.fontRed1 {
+    color: #EE6161;
+    }
+
+// 所有带间隔线条
+.lineHeader {
+    height: 44px;
+    line-height: 44px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #F1F1F1;
+    span {
+        position: relative;
+        &:before, &:after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 2px;
+            background: #4A90FA;
+            border-radius: 2px;
+            }
+        &:after {
+            left: -35px;
+            }
+        &:before {
+            right: -35px;
+            }
+        }
+    }
+
+.paddingBottom0 {
+    padding-bottom: 0 !important;
+    }
+
+/*图片block*/
+.block {
+    display: block;
+    }
+
+/*文本溢出省略号*/
+.text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+    }
+
+.overflow-hidden {
+    overflow: hidden;
+    }
+
+//暂无评价
+.no-comment {
+    text-align: center;
+    line-height: 40px
+    }
+
+//图片居中填充
+.img-object-fit {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    }
+
+.img-object-fit-cover {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    }
+
+/*
+flex 布局
+*/
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }

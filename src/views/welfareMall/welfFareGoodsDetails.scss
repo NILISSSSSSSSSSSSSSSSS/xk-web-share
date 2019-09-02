@@ -1,0 +1,182 @@
+@import "~assets/sass/common/theme.scss";
+
+.welfDestrucption_row {
+    font-size: 14px;
+    color: $font-gray;
+    line-height: 13px;
+    margin-top: 10px;
+    display: flex;
+
+    .welfDestrucption_column {
+        flex: 1;
+        .wele_val {
+            margin-left: 2px;
+            }
+        }
+    .progress {
+        flex: none;
+        width: 100px;
+        }
+    .red {
+        color: #EE6161;
+        }
+    }
+
+.goods-num {
+    .weui-cells {
+        margin-top: 0 !important;
+        }
+    }
+
+.goods-comment {
+    .comment-j {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 45px;
+        padding: 0 10px;
+        border-bottom: 1px solid #F1F1F1;
+        .j-title {
+            font-size: 14px;
+            }
+        .j-all {
+            color: #4A90FA;
+            i {
+                color: #4A90FA;
+                }
+            }
+        }
+    }
+
+/*
+.goods-comment .comment .comment-item .comment-message .comment-img img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 2px;
+    margin-right: 2px;
+}
+
+.goods-comment .comment .comment-item .comment-message .comment-img {
+    padding: 0px;
+}
+
+.goods-comment .comment .comment-item .comment-message {
+    margin-top: 3px;
+}*/
+
+/*进度条*/
+.progressBox {
+    width: 100%;
+    position: relative;
+    background: #DFE2E6;
+    /*border: 4px solid #DFE2E6;*/
+    height: 4px;
+    border-radius: 4px;
+    margin-top: 5px;
+
+    .progressLeft {
+        width: 80%;
+        height: 100%;
+        background: #4A90FA;
+        text-align: right;
+        border-radius: 2px;
+        .progressNumber {
+            background: #FFFFFF;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.17);
+            border-radius: 2px;
+            font-size: 12px;
+            color: #222222;
+            letter-spacing: 0;
+            text-align: center;
+            width: 36px;
+            height: 16px;
+            display: inline-block;
+            /* padding: 2px 4px; */
+            line-height: 16px;
+            transform: translateY(-40%);
+            }
+        }
+    }
+
+/*带横线的标题文字*/
+.lineTitle {
+    display: flex;
+    justify-content: center;
+    .lineText {
+        margin-top: 21px;
+        position: relative;
+        &:after,
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 16px;
+            background: #4A90FA;
+            border-radius: 8px;
+            height: 2px;
+            }
+        &:before {
+            left: -34px;
+            }
+        &:after {
+            right: -34px;
+            }
+        }
+    }
+
+.j-cart-model {
+    display: flex;
+    height: 40px;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #F1F1F1;
+    font-size: 14px;
+    color: #222222;
+    i {
+        font-size: 20px;
+        }
+    }
+
+.j-til {
+    font-size: 14px;
+    color: #222222;
+    }
+
+.j-goods-detail {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #F1F1F1;
+    overflow: hidden;
+    .j-detail {
+        margin-left: 12px;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 2;
+        .j-name {
+            color: #222222;
+            font-size: 14px;
+            }
+        .j-goods-sku {
+            flex-grow: 2;
+            .j-sku {
+                font-size: 12px;
+                color: #777777;
+                }
+            .j-sku-pro {
+                width: 100%;
+                span {
+                    flex-shrink: 0
+                    }
+                display: inline-flex;
+                justify-content: space-between;
+                .progressBox {
+                    top: 3px;
+                    }
+                }
+            }
+        }
+    }

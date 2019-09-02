@@ -1,0 +1,613 @@
+/**
+ * Created by zhangmei on 2019/7/31
+ */
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .2s;
+    }
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+    }
+
+.business-detail-revision {
+    color: #222222;
+    height: 100%;
+    .page-wrapper {
+        padding-bottom: 50px;
+        }
+    /*
+    顶部header
+    */
+    .header-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+
+        .action-bar {
+            width: 100%;
+            padding: 28px 10px 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 102;
+
+            .action-icon {
+                height: 28px;
+                width: 28px;
+                }
+
+            .back-icon {
+                background: no-repeat url("~assets/image/business-detail-revision/back-icon.png") 0 0 / 100%;
+                }
+
+            .collection {
+                background: no-repeat url("~assets/image/business-detail-revision/collection-icon.png") 0 0 / 100%;
+                }
+
+            .transport {
+                background: no-repeat url("~assets/image/business-detail-revision/transport-icon.png") 0 0 / 100%;
+                margin-left: 15px;
+                }
+            }
+
+        /*
+        店铺标题
+        */
+        .action-title {
+            background: #FFFFFF;
+            padding: 0 15px;
+            padding-top: 20px;
+            height: 64px;
+            position: absolute;
+            width: 100%;
+            z-index: 103;
+            font-size: 17px;
+            color: #222222;
+
+            .back-icon {
+                height: 18px;
+                width: 25%;
+                flex-shrink: 0;
+                flex-grow: 0;
+
+                span {
+                    display: block;
+                    width: 10%;
+                    height: 100%;
+                    background: no-repeat url("~assets/image/business-detail-revision/back-title-icon.png") 0 0 /10px 18px;
+                    }
+                }
+
+            .shop-name {
+                width: 50%;
+                flex-shrink: 0;
+                flex-grow: 0;
+                text-align: center;
+                min-width: 0;
+                height: 20px;
+                line-height: 20px;
+                }
+
+            .action-share {
+                display: flex;
+                width: 25%;
+                flex-shrink: 0;
+                flex-grow: 0;
+                flex-direction: row-reverse;
+
+                .action-icon {
+                    width: 20px;
+                    height: 20px;
+                    }
+
+                .collection {
+                    background: no-repeat url("~assets/image/business-detail-revision/collection-title-icon.png") 0 0 / 100%;
+                    }
+
+                .transport {
+                    margin-left: 20px;
+                    background: no-repeat url("~assets/image/business-detail-revision/transport-tittle-icon.png") 0 0 / 100%;
+                    }
+                }
+            }
+        }
+
+    /*
+    banner
+    */
+    .banner {
+        position: relative;
+        height: 255px;
+
+        /deep/ .vux-slider {
+            height: 100%;
+            .vux-swiper {
+                height: 100%;
+                }
+            }
+
+        .dots {
+            justify-content: center;
+            z-index: 1;
+            position: absolute;
+            height: 22px;
+            width: 40px;
+            color: #FFFFFF;
+            font-size: 12px;
+            border-radius: 40px;
+            right: 10px;
+            bottom: 15px;
+            background: rgba(0, 0, 0, .4);
+            }
+        }
+
+    /*
+    店铺基本信息
+    */
+    .shop-basic-info {
+        padding: 20px 15px;
+        .shop-basic {
+            min-height: 0;
+            .shop-name {
+                min-width: 0;
+                h4 {
+                    font-size: 17px;
+                    color: #222222;
+                    line-height: 22px;
+                    font-weight: 500;
+                    }
+                .shop-status {
+                    font-size: 12px;
+                    color: #777777;
+                    line-height: 14px;
+                    margin-top: 7px;
+                    }
+                .shop-score {
+                    height: 20px;
+                    color: #222222;
+                    font-size: 14px;
+                    margin-top: 6px;
+                    /deep/ .scoreWrapper {
+                        align-items: center;
+                        }
+                    }
+                .deep-discount {
+                    font-size: 10px;
+                    line-height: 16px;
+                    padding: 0 5px;
+                    border-radius: 2px;
+                    border: 1px solid #E2737C;
+                    display: inline-block;
+                    color: #E2737C;
+                    margin-top: 6px;
+                    }
+                }
+            .shop-cover {
+                flex-shrink: 0;
+                width: 63px;
+                height: 63px;
+                margin-left: 15px;
+                img {
+                    border-radius: 2px;
+                    }
+                }
+            }
+        .shop-distance {
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 20px;
+            p {
+                padding-left: 17px;
+                span {
+                    color: #777777;
+                    }
+                }
+            p:first-child {
+                position: relative;
+                &::after {
+                    content: '';
+                    width: 10px;
+                    height: 13px;
+                    background: no-repeat url("~assets/image/business-detail-revision/shop-address-icon.png") 0 0 /100%;
+                    position: absolute;
+                    top: 3px;
+                    left: 0;
+                    }
+                }
+            /*p:last-child {
+                color: #777777;
+                margin-top: 2px;
+                }*/
+            }
+        }
+
+    /*
+    优惠券信息
+    */
+    .shop-coupon {
+        padding: 0 15px;
+        .get-coupon {
+            /deep/ .custom-cell {
+                padding: 0;
+                font-size: 14px;
+                border: none;
+                }
+            .right-content {
+                color: #4A90FA;
+                }
+            .label {
+                span {
+                    display: inline-block;
+                    height: 16px;
+                    width: 16px;
+                    text-align: center;
+                    font-size: 12px;
+                    border-radius: 2px;
+                    background: #FF8523;
+                    color: #FFFFFF;
+                    }
+                }
+            }
+        .activity-banner {
+            height: 114px;
+            margin-top: 10px;
+            .activity-des {
+                position: relative;
+                padding-left: 40px;
+                height: 100%;
+                padding-top: 25px;
+                background: no-repeat url("~assets/image/business-detail-revision/activity-banner-bg.png") 0 0 /100%;
+                color: #AA7C30;
+                font-size: 18px;
+                .activity-name {
+                    line-height: 20px;
+                    }
+                .activity-price {
+                    font-size: 12px;
+                    color: #C89E58;
+                    height: 24px;
+                    margin-top: 3px;
+                    span {
+                        color: #C86A58;
+                        font-size: 18px;
+                        }
+                    }
+                .activity-expire {
+                    font-size: 10px;
+                    color: #9D8D6A;
+                    margin-top: 16px;
+                    }
+                .activity-type {
+                    position: absolute;
+                    line-height: 14px;
+                    font-size: 10px;
+                    bottom: 11px;
+                    right: 11px;
+                    color: #FFFFFF;
+                    }
+                }
+            }
+        .fast-nav {
+            padding: 0;
+            }
+        }
+
+    /*
+    热销
+    */
+    .popular-product {
+        padding: 0 15px;
+        margin-top: 24px;
+        strong {
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 30px;
+            }
+        .product-types {
+            padding-top: 20px;
+            ul {
+                justify-content: flex-start;
+                li {
+                    width: 69px;
+                    flex-direction: column;
+                    position: relative;
+                    img.type-icon {
+                        height: 28px;
+                        width: 30px;
+                        }
+                    color: #555555;
+                    font-size: 12px;
+                    text-align: center;
+                    p {
+                        height: 22px;
+                        line-height: 18px;
+                        margin-top: 5px;
+                        }
+                    &.active::after {
+                        left: 50%;
+                        content: "";
+                        height: 2px;
+                        width: 23px;
+                        background: #4A90FA;
+                        bottom: 0;
+                        }
+                    }
+                }
+            }
+
+        .product-list {
+            margin-top: 25px;
+            ul > li {
+                height: 70px;
+                &:not(:first-child) {
+                    margin-top: 30px;
+                    }
+                .product-action {
+                    flex-grow: 1;
+                    justify-content: flex-start;
+                    height: 100%;
+                    .product-cover {
+                        height: 70px;
+                        width: 70px;
+                        flex-shrink: 0;
+                        img {
+                            border-radius: 5px;
+                            }
+                        }
+                    .product-info {
+                        height: 100%;
+                        margin-left: 15px;
+                        width: 0;
+                        flex-grow: 1;
+                        .product-name {
+                            font-size: 14px;
+                            }
+                        p.product-price {
+                            font-size: 18px;
+                            color: #EE6161;
+                            justify-content: flex-start;
+                            margin-top: 15px;
+                            span {
+                                padding: 0 5px;
+                                height: 16px;
+                                line-height: 16px;
+                                border: 1px solid rgba(226, 115, 124, 1);
+                                color: #E2737C;
+                                font-size: 10px;
+                                border-radius: 2px;
+                                text-align: center;
+                                margin-left: 5px;
+                                }
+                            del {
+                                font-size: 12px;
+                                color: #999999;
+                                margin-left: 5px;
+                                }
+                            }
+                        }
+                    }
+
+                .buy-product {
+                    flex-shrink: 0;
+                    margin-left: 5px;
+                    height: 100%;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    .order-btn {
+                        width: 60px;
+                        height: 22px;
+                        border-radius: 12px;
+                        border: 1px solid #4A90FA;
+                        color: #4A90FA;
+                        line-height: 20px;
+                        text-align: center;
+                        }
+                    > p {
+                        color: #777777;
+                        font-size: 10px;
+                        margin-top: 15px;
+                        }
+                    }
+                }
+            }
+        .show-more-product {
+            /deep/ .custom-cell {
+                border: none;
+                .left-content {
+                    margin-right: 10px;
+                    }
+                padding: 0;
+                &::after {
+                    background: no-repeat url("~assets/image/arrow-right-blue.png") 0 0/100%;
+                    }
+                .left-content {
+                    span:last-child {
+                        color: #4A90FA;
+                        font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+    /*
+    店铺详情
+    */
+    .shop-detail {
+        strong {
+            line-height: 58px;
+            font-weight: 500;
+            font-size: 17px;
+            }
+        padding: 0 15px;
+        .shop-des {
+            line-height: 20px;
+            color: #555555;
+            font-size: 14px;
+            }
+        .shop-reserve {
+            position: relative;
+            .phone-icon {
+                position: absolute;
+                right: 0;
+                top: -2px;
+                height: 20px;
+                width: 20px;
+                background: no-repeat url("~assets/image/business-detail-revision/phone-icon.png") 0 0 / 100%;
+                }
+            dl {
+                > div {
+                    margin-top: 15px;
+                    justify-content: flex-start;
+                    dt {
+                        font-size: 14px;
+                        font-weight: 400;
+                        }
+                    dd {
+                        color: #555555;
+                        margin-left: 10px;
+                        }
+                    &.shop-discount {
+                        > dd {
+                            padding: 0 5px;
+                            height: 16px;
+                            line-height: 16px;
+                            border-radius: 2px;
+                            font-size: 10px;
+                            color: #E2737C;
+                            text-align: center;
+                            border: 1px solid #E2737C;
+                            }
+                        }
+                    &.shop-phone {
+                        dt {
+                            align-self: flex-start;
+                            }
+                        dd {
+                            padding-top: 1px;
+                            p:not(:first-child) {
+                                margin-top: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        .shop-images {
+            .banner {
+                height: 160px;
+                img {
+                    border-radius: 5px;
+                    }
+                }
+            /deep/ .custom-cell {
+                padding: 0;
+                border: none;
+                }
+            }
+        }
+    }
+
+.fast-nav-wrapper {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 57px;
+    top: 64px;
+    .flag {
+        height: 3px;
+        bottom: 14px;
+        background: #4A90FA;
+        width: 30px;
+        z-index: 1000;
+        position: absolute;
+        transition: .3s ease;
+        }
+    }
+
+.fast-nav {
+    padding: 0 15px;
+    justify-content: flex-start;
+    &.fixed {
+        position: fixed;
+        }
+    top: 44px;
+    width: 100%;
+    height: 57px;
+    background: #FFFFFF;
+    .nav-item {
+        position: relative;
+        font-size: 15px;
+        padding: 0 0 7px;
+        &:not(:last-child) {
+            margin-right: 30px;
+            }
+        p {
+            line-height: 25px;
+            }
+        }
+    .active {
+        p {
+            font-weight: bold;
+            }
+        }
+    .no-flag.active {
+        &::after {
+            content: '';
+            width: 30px;
+            height: 3px;
+            background: #4A90FA;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            }
+        }
+    &.head {
+        justify-content: flex-start;
+        .nav-item:not(:last-child) {
+            margin-right: 35px;
+            }
+        }
+    }
+
+.shop-closed {
+    line-height: 50px;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    font-size: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    bottom: 0;
+    }
+
+.bgfff {
+    background: #FFFFFF;
+    }
+
+.phone-content {
+    text-align: center;
+    color: #4A90FA;
+    padding-top: 10px;
+    }
+
+.close-phone {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #EE6161;
+    text-align: center;
+    font-size: 14px;
+    }
+
+.shop-phone-item {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: #4A90FA;
+    }

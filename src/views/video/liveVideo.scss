@@ -1,0 +1,344 @@
+@keyframes music-avatar-rotate {
+    to {
+        transform: rotate(0deg);
+        }
+    from {
+        transform: rotate(-360deg);
+        }
+    }
+
+@keyframes little-music-rotate {
+    0% {
+        top: 56px;
+        left: 0;
+        opacity: 0.1;
+        transform: rotate(0deg);
+        }
+    25% {
+        left: -15px;
+        }
+    50% {
+        left: -25px;
+        top: 20px;
+        opacity: 1;
+        width: 16px;
+        height: 16px;
+        }
+    100% {
+        left: -20px;
+        top: -12px;
+        opacity: 0;
+        width: 16px;
+        height: 16px;
+        transform: rotate(90deg);
+        }
+    }
+
+.download-tips {
+    height: 54px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    .broadcast-name {
+        justify-content: flex-start;
+        img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            }
+        > div {
+            p {
+                color: #FFFFFF;
+                line-height: 18px;
+                font-size: 14px;
+                }
+            p:last-child {
+                color: #CCCCCC;
+                font-size: 12px;
+                }
+            }
+        }
+    .live-logo {
+        width: 30px;
+        height: 30px;
+        background: no-repeat url("~assets/image/video/live-logo.png") 0 0 / 30px 30px;
+        }
+    .xk-short-video {
+        flex-grow: 1;
+        height: 17px;
+        margin-left: 10px;
+        background: no-repeat url("~assets/image/video/xk-video.png") 0 center / 80px 15px;
+        }
+    .download {
+        .open-btn {
+            height: 32px;
+            width: 91px;
+            background: linear-gradient(202deg, rgba(255, 215, 30, 1) 0%, rgba(255, 174, 13, 1) 100%);
+            border-radius: 16px;
+            color: #333333;
+            font-size: 14px;
+            line-height: 32px;
+            text-align: center;
+            }
+        .close {
+            height: 12px;
+            width: 12px;
+            background: no-repeat url("~assets/image/video-close.png") 0 0 /100%;
+            margin-left: 15px;
+            }
+        }
+    }
+
+.live-video {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 1);
+    /*
+    background: url("../../assets/image/lottery-bg@2.png");
+    */
+    .video-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 12;
+        background: transparent;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            }
+        .video-player-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            font-size: 60px;
+            color: #CCCCCC;
+            }
+        }
+    video {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        transform: translateY(-50%);
+        z-index: 10;
+        object-fit: fill;
+        }
+
+    .action-bar {
+        position: absolute;
+        height: 440px;
+        background: transparent;
+        right: 0;
+        bottom: 0;
+        width: 58px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 15;
+        padding-bottom: 20px;
+        /*头像*/
+        .avatar {
+            height: 53px;
+            width: 53px;
+            position: relative;
+            .click-to-follow {
+                display: block;
+                position: absolute;
+                width: 28px;
+                height: 28px;
+                background: url("~assets/image/video/click-flow.png") 0 0 / 100% 100% no-repeat;
+                bottom: -10px;
+                left: 14px;
+                }
+            & > img {
+                display: block;
+                height: 53px;
+                width: 53px;
+                border-radius: 50px;
+                }
+            }
+
+        /*我在直播*/
+        .my-being-live {
+            width: 58px;
+            height: 42px;
+            background: url("~assets/image/video/being-live.png") 0 0 / 100% 100% no-repeat;
+            }
+
+        /*小心心*/
+        .like {
+            width: 53px;
+            padding-top: 34px;
+            background: url("~assets/image/video/before-like.png") 7px 0px / 39px 34px no-repeat;
+            span {
+                display: block;
+                font-size: 12px;
+                color: #FFFFFF;
+                letter-spacing: 0.1px;
+                text-align: center;
+                line-height: 12px;
+                }
+            }
+
+        /*评论*/
+        .comment {
+            width: 53px;
+            padding-top: 38px;
+            background: url("~assets/image/video/comment.png") 0 0 / 53px 38px no-repeat;
+            span {
+                display: block;
+                font-size: 12px;
+                color: #FFFFFF;
+                letter-spacing: 0.1px;
+                text-align: center;
+                line-height: 12px;
+                }
+            }
+
+        /*转发*/
+        .forward {
+            width: 53px;
+            padding-top: 37px;
+            background: url("~assets/image/video/forwardxx.png") 0 0 / 53px 37px no-repeat;
+            span {
+                display: block;
+                font-size: 12px;
+                color: #FFFFFF;
+                letter-spacing: 0.1px;
+                text-align: center;
+                line-height: 12px;
+                }
+            }
+
+        /*礼物*/
+        .gift {
+            width: 53px;
+            height: 35px;
+            background: url("~assets/image/video/gift.png") 0 0 / 100% 100% no-repeat;
+            }
+
+        /*音乐旋转*/
+        .music-rotate {
+            width: 53px;
+            height: 53px;
+            position: relative;
+            & > img {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                display: block;
+                border-radius: 50%;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                animation: 5s linear music-avatar-rotate infinite;
+                }
+            span {
+                display: block;
+                height: 13px;
+                width: 13px;
+                position: absolute;
+                top: 22px;
+                left: 22px;
+                z-index: 9;
+                animation: 2s infinite linear little-music-rotate;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    }
+                }
+            & > span:nth-child(2) {
+                animation-delay: 1s;
+                }
+            & > span:nth-child(3) {
+                animation-delay: 2s;
+                }
+            & > span:nth-child(4) {
+                animation-delay: 3s;
+                }
+            }
+
+        }
+    .video-info {
+        position: absolute;
+        padding-left: 10px;
+        left: 0;
+        bottom: 0;
+        width: 260px;
+        padding-bottom: 15px;
+        background-color: transparent;
+        z-index: 15;
+        .ad, .location {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            height: 24px;
+            line-height: 24px;
+            border-radius: 6px;
+            padding-right: 5px;
+            height: 24px;
+            padding-left: 26px;
+            color: #FFFFFF;
+            font-size: 12px;
+            }
+        .ad {
+            background: url("~assets/image/video/shoppong-cart.png") 5px 4px / 16px 16px no-repeat;
+            background-color: rgba(0, 0, 0, 0.25);
+            }
+        .location {
+            background: url("~assets/image/video/location.png") 5px 4px / 16px 16px no-repeat;
+            background-color: rgba(0, 0, 0, 0.25);
+            margin-top: 5px;
+            }
+
+        .video-description {
+            margin-top: 5px;
+            .author {
+                font-size: 16px;
+                color: #FFFFFF;
+                line-height: 20px;
+                }
+            .topic {
+                font-size: 14px;
+                color: rgb(254, 207, 0);
+                letter-spacing: 0.1px;
+                line-height: 14px;
+                margin-top: 7px;
+                }
+            .content {
+                font-size: 14px;
+                color: #FFFFFF;
+                letter-spacing: 0.1px;
+                line-height: 18px;
+                margin-top: 10px;
+                }
+            .background-music {
+                padding-left: 23px;
+                height: 18px;
+                line-height: 18px;
+                margin-top: 10px;
+                background: url("~assets/image/video/backgroud-music.png") -3px 0 / 18px 18px no-repeat;
+                font-size: 12px;
+                color: #FFFFFF;
+                > div {
+                    height: 100%;
+                    line-height: 18px;
+                    white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }

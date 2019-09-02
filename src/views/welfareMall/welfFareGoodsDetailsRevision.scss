@@ -1,0 +1,282 @@
+/**
+ * Created by zhangmei on 2019/6/15
+ */
+.welfGoodsDetails_wrapper {
+    .lottery-outline {
+        height: 50px;
+        background-image: linear-gradient(-90deg, #F02525 0%, #FF570D 97%);
+        display: flex;
+        .lottery-price {
+            flex-grow: 1;
+            padding: 0 10px 0 15px;
+            display: flex;
+            justify-content: space-between;
+            .join-way {
+                width: 100%;
+                color: #FFFFFF;
+                p {
+                    font-size: 11px;
+                    }
+                p:first-child {
+                    padding: 0 5px;
+                    border-radius: 6px;
+                    height: 14px;
+                    line-height: 14px;
+                    border: 1px solid #FFFFFF;
+                    margin-top: 10px;
+                    display: inline-block;
+                    }
+                p:last-child {
+                    font-size: 11px;
+                    line-height: 14px;
+                    margin-top: 11px;
+                    }
+                &.lottery-jindu {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-right: 12px;
+                    align-items: center;
+                    p {
+                        margin-top: 0;
+                        }
+                    p:first-child {
+                        height: 24px;
+                        font-size: 14px;
+                        line-height: 22px;
+                        border-radius: 12px;
+                        }
+                    p:last-child {
+                        font-size: 12px;
+                        }
+                    }
+                &.platform-lottery {
+                    p:first-child {
+                        display: block;
+                        font-size: 16px;
+                        height: 24px;
+                        line-height: 24px;
+                        border-radius: unset;
+                        border: none;
+                        margin-top: 5px;
+                        span {
+                            font-size: 22px;
+                            }
+                        }
+                    p:last-child {
+                        margin-top: 2px;
+                        height: 14px;
+                        padding: 0 5px;
+                        line-height: 14px;
+                        border-radius: 7px;
+                        border: 1px solid #FFFFFF;
+                        display: inline-block;
+                        font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+        /*
+        倒计时
+        */
+        .count-down {
+            background: #FFE0D4;
+            flex-shrink: 0;
+            width: 120px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            > p {
+                font-size: 12px;
+                color: #F01919;
+                line-height: 14px;
+                padding-top: 4px;
+                }
+            .time-wrapper {
+                margin-top: 3px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span {
+                    background: #F4341D;
+                    border-radius: 3px;
+                    color: #FFFFFF;
+                    line-height: 20px;
+                    padding: 0 5px;
+                    font-size: 12px;
+                    text-align: center;
+                    position: relative;
+                    &:not(:first-child) {
+                        margin-left: 8px;
+                        &::before {
+                            content: ':';
+                            width: 8px;
+                            font-size: 18px;
+                            color: #F4341D;
+                            height: 100%;
+                            position: absolute;
+                            left: -8px;
+                            top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    .goods-title {
+        .lottery-des {
+            font-size: 13px;
+            color: #EE6161;
+            line-height: 17px;
+            margin-top: 5px;
+            }
+        .periods-number {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 4px;
+            .number {
+                display: flex;
+                span {
+                    height: 20px;
+                    line-height: 20px;
+                    font-size: 13px;
+                    color: #555555;
+                    }
+                span:first-child {
+                    background: linear-gradient(90deg, #4A90FA, #7FC1FD);
+                    padding: 0 5px;
+                    border-radius: 20px;
+                    min-width: 48px;
+                    text-align: center;
+                    color: #FFFFFF;
+                    margin-right: 5px;
+                    }
+                }
+            }
+        .lottery-progress {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 73px;
+            height: 28px;
+            font-size: 13px;
+            color: #FFFFFF;
+            position: relative;
+            right: -10px;
+            border-radius: 14px 0 0 14px;
+            background: linear-gradient(90deg, #F8411C, #FE672C);
+            span:first-child {
+                margin-right: 3px;
+                width: 9px;
+                height: 11px;
+                background: no-repeat url("~assets/image/lottery-open-icom.png") center/100%;
+                }
+            &.is-opened {
+                background: linear-gradient(90deg, #FF9D32, #FEBE2C);
+                }
+            }
+        }
+
+    /*
+    开奖要求
+    */
+    .open-demand {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        padding: 10px 0;
+        color: #999999;
+        }
+
+    .tips {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        color: #EE6161;
+        height: 16px;
+        span:first-child {
+            height: 14px;
+            width: 14px;
+            font-size: 12px;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 14px;
+            border: 1px solid #EE6161;
+            margin-right: 3px;
+            }
+        }
+
+    /*
+    cell列表
+    */
+    .cell-list {
+        margin-top: 10px;
+        /deep/ .custom-cell {
+            padding-right: 15px;
+            height: 48px;
+            }
+        }
+
+    .current-join-consumer {
+        margin-top: 10px;
+        /deep/ .navigation-label {
+            padding: 0 15px 0 10px;
+            border-bottom: 1px solid #F1F1F1;
+            }
+        .consumer-list {
+            background: #FFFFFF;
+            ul {
+                padding: 0 0 0 15px;
+                li {
+                    padding: 10px 0 0;
+                    display: flex;
+                    .avatar {
+                        width: 40px;
+                        height: 40px;
+                        flex-shrink: 0;
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            border-radius: 5px;
+                            }
+                        }
+                    .lottery-info {
+                        margin-left: 10px;
+                        padding-bottom: 15px;
+                        flex-grow: 1;
+                        border-bottom: 1px solid #F1F1F1;
+                        .header {
+                            font-size: 14px;
+                            font-weight: bold;
+                            color: #222222;
+                            p {
+                                line-height: 16px;
+                                }
+
+                            }
+                        .lottery-list {
+                            p {
+                                font-size: 12px;
+                                color: #555555;
+                                line-height: 14px;
+                                margin-top: 3px;
+                                span {
+                                    color: #EE6161;
+                                    }
+                                }
+                            p:first-child {
+                                margin-top: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+

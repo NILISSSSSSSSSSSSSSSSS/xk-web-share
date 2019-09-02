@@ -1,0 +1,28 @@
+/**
+ * Created by zhangmei on 2018/12/18
+ */
+//多行溢出省略号
+@mixin multiLineEllipsis($lineHeight: 14px, $lineCount: 1, $bgColor: white,$marginRight:14px) {
+    overflow: hidden;
+    position: relative;
+    line-height: $lineHeight;
+    max-height: $lineHeight * $lineCount;
+    text-align: justify;
+    margin-right: -1em;
+    padding-right: 1em;
+    &:before {
+        content: '...';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        }
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height: 1em;
+        margin-top: 0.2em;
+        background: $bgColor;
+        }
+    }
